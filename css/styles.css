@@ -1,0 +1,257 @@
+body {
+    font-family: 'Helvetica', Arial, sans-serif; /* Utilise Helvetica comme police principale */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Ajoute un fond blanc au corps si nécessaire */
+}
+
+header {
+    background: white; /* Fond de la barre de navigation en blanc */
+    color: rgb(19, 32, 25); /* Texte de la barre de navigation en vert */
+    padding: 1rem 0; /* Padding responsive */
+    position: relative; /* Positionnement relatif pour le header */
+    z-index: 10; /* Assure que la nav soit au-dessus du hero */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Aligner les liens à droite */
+    padding-left: 3%; /* Padding gauche */
+    padding-right: 3%; /* Padding droit */
+    align-items: center; /* Centre les éléments verticalement */
+    height: 100%; /* Assure que la navbar a une hauteur pour le centrage */
+}
+
+nav ul li {
+    margin: 0 2%; /* Espace entre les éléments de la navbar */
+}
+
+nav ul li a {
+    color: rgb(19, 32, 25); /* Couleur du texte en vert */
+    text-decoration: none;
+    font-weight: bold; /* Met les liens en gras */
+    transition: color 0.3s; /* Effet de transition */
+}
+
+nav ul li a:hover {
+    color: #005f00; /* Changement de couleur au survol */
+}
+
+.hero {
+    background-image: url(/img/hero_img.jpg); /* Remplace par le chemin de ton image */
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* Utilise 100% de la hauteur de la vue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    margin: 0; /* Enlève les marges */
+}
+
+.hero-content h1 {
+    font-size: 4.5vw; /* Taille du titre ajustée */
+    margin: 0;
+    text-shadow: 1px 1px rgb(19, 32, 25); /* Contour du texte en vert */
+    -webkit-text-stroke: 1px rgb(19, 32, 25); /* Contour vert pour le texte */
+}
+
+.hero-content h2 {
+    font-size: 3vw; /* Taille du sous-titre ajustée */
+    margin: 0;
+    text-shadow: 1px 1px rgb(19, 32, 25); /* Contour du texte en vert */
+    -webkit-text-stroke: 1px rgb(19, 32, 25); /* Contour vert pour le texte */
+}
+
+.presentation {
+    display: flex; /* Utilise flexbox pour organiser les sections */
+    align-items: center; /* Centre les éléments verticalement */
+    width: 55%;
+    height: 60vh; /* Hauteur de la section de présentation */
+    background-color: rgb(19, 32, 25); /* Fond vert */
+    color: white; /* Texte en blanc */
+    padding: 2rem; /* Padding de la section */
+    position: relative; /* Positionnement relatif pour le chevauchement */
+    margin-top: -100px; /* Chevauche légèrement le hero banner */
+    opacity: 0; /* Commence invisible */
+    transform: translateX(-100px); /* Déplace la section hors de la vue vers la gauche */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transition pour l'effet */
+}
+
+.presentation.visible {
+    opacity: 1; /* Devenez visible */
+    transform: translateX(0); /* Revenir à sa position d'origine */
+}
+
+.presentation-text {
+    margin-left: 10%;
+    width: 75%; /* Largeur de la section de présentation */
+}
+
+.presentation h2 {
+    margin-top: 0; /* Enlève la marge supérieure */
+}
+
+.presentation p {
+    font-size: 1rem; /* Taille de police pour le texte */
+}
+
+/* Section Émissions de CO2 */
+.emissions-co2 {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    padding: 0;
+    display: flex; /* Flexbox pour aligner les éléments de gauche à droite */
+    justify-content: space-between; /* Espace entre les éléments */
+    align-items: center; /* Centre les éléments verticalement */
+    width: 85%; /* Largeur de la section */
+}
+
+.co2-text {
+    width: 30%; /* Largeur pour la section texte */
+    padding: 2rem;
+    background-color: rgb(19, 32, 25); /* Fond vert uniquement pour la partie texte */
+    color: white; /* Texte en blanc */
+    box-shadow: none; /* Pas d'ombre */
+    opacity: 0; /* Commence invisible */
+    transform: translateY(20px); /* Déplace légèrement le texte vers le bas */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transition pour l'effet */
+}
+
+.co2-text.visible {
+    opacity: 1; /* Devient visible */
+    transform: translateY(0); /* Revenir à sa position d'origine */
+}
+
+.co2-graph {
+    width: 50%; /* Largeur pour la partie graphique */
+    background-color: white; /* Fond blanc pour la partie graphique */
+    padding: 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre pour le contraste */
+}
+
+.co2-graph img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.somme {
+    position: absolute; /* Position absolue pour le chevauchement */
+    top: calc(80vh + 20vh); /* Positionné juste en dessous du hero banner (ajuster si nécessaire) */
+    right: 10%; /* Ajustez cette valeur pour l'alignement */
+    width: 25%; /* Largeur du sommaire */
+    background-color: white; /* Fond blanc pour le sommaire */
+    padding: 1rem; /* Padding du sommaire */
+    color: rgb(19, 32, 25); /* Texte en vert */
+    box-shadow: none; /* Enlève la bordure ou l'ombre */
+}
+
+.somme h2 {
+    margin-top: 0; /* Enlève la marge supérieure */
+}
+
+.somme ul {
+    list-style: none; /* Enlève les puces */
+    padding: 0; /* Enlève le padding */
+}
+
+section {
+    padding: 2rem; /* Padding responsive */
+    margin: 2rem 0; /* Marges responsive */
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0; /* Padding responsive */
+    background: rgb(19, 32, 25); /* Fond du footer en vert */
+    color: white; /* Texte du footer en blanc */
+}
+
+footer p {
+    font-size: 0.9rem; /* Taille de police pour le texte du footer */
+}
+
+.membre {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 1rem; /* Padding responsive */
+}
+
+#tooltip {
+    position: absolute;
+    visibility: hidden;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    pointer-events: none; /* Le tooltip ne doit pas interférer avec les événements de la souris */
+}
+#france-map {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+    margin: 20px 0;
+}
+
+/* Media Queries pour rendre le site responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Aligne les éléments de la navbar verticalement sur petits écrans */
+    }
+
+    .hero-content h1 {
+        font-size: 6vw; /* Ajuste la taille du titre pour petits écrans */
+    }
+
+    .hero-content h2 {
+        font-size: 4vw; /* Ajuste la taille du sous-titre pour petits écrans */
+    }
+
+    .presentation {
+        flex-direction: column; /* Aligne les sections verticalement sur petits écrans */
+    }
+
+    .presentation-text,
+    .additional-info {
+        width: 100%; /* Prend 100% de la largeur sur petits écrans */
+        padding-left: 0; /* Enlève le padding gauche */
+    }
+
+    section {
+        padding: 1rem; /* Réduit le padding sur petits écrans */
+        margin: 1rem 0; /* Réduit les marges sur petits écrans */
+    }
+
+    footer {
+        padding: 1rem 0; /* Réduit le padding du footer sur petits écrans */
+    }
+
+    footer p {
+        font-size: 0.8rem; /* Ajuste la taille de la police pour le footer */
+    }
+
+    .emissions-co2 {
+        flex-direction: column; /* Aligne les sections verticalement sur petits écrans */
+        text-align: center;
+        width: 100%; /* Prend 100% de la largeur */
+    }
+
+    .co2-text {
+        width: 100%; /* La section prend 100% de la largeur */
+        margin-left: 0; /* Enlève la marge à gauche */
+    }
+
+    .co2-graph {
+        width: 100%; /* Le graphique prend aussi 100% de la largeur */
+        margin-top: 2rem; /* Ajoute un espace entre le texte et le graphique */
+    }
+}
