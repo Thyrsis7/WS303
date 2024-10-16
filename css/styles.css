@@ -41,7 +41,7 @@ nav ul li a:hover {
 }
 
 .hero {
-    background-image: url(/img/hero_img.jpg); /* Remplace par le chemin de ton image */
+    background-image: url(/img/hero_img.webp); /* Remplace par le chemin de ton image */
     background-size: cover;
     background-position: center;
     height: 80vh; /* Utilise 100% de la hauteur de la vue */
