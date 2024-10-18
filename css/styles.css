@@ -1,138 +1,136 @@
 body {
-    font-family: 'Helvetica', Arial, sans-serif; /* Utilise Helvetica comme police principale */
+    font-family: 'Helvetica', Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: white; /* Ajoute un fond blanc au corps si nécessaire */
+    background-color: white;
 }
 
 header {
-    background: white; /* Fond de la barre de navigation en blanc */
-    color: rgb(19, 32, 25); /* Texte de la barre de navigation en vert */
-    padding: 1rem 0; /* Padding responsive */
-    position: relative; /* Positionnement relatif pour le header */
-    z-index: 10; /* Assure que la nav soit au-dessus du hero */
+    background: white;
+    color: rgb(19, 32, 25);
+    padding: 1rem 0;
+    position: relative;
+    z-index: 10;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: flex-end; /* Aligner les liens à droite */
-    padding-left: 3%; /* Padding gauche */
-    padding-right: 3%; /* Padding droit */
-    align-items: center; /* Centre les éléments verticalement */
-    height: 100%; /* Assure que la navbar a une hauteur pour le centrage */
+    justify-content: flex-end;
+    padding-left: 3%;
+    padding-right: 3%;
+    align-items: center;
+    height: 100%;
 }
 
 nav ul li {
-    margin: 0 2%; /* Espace entre les éléments de la navbar */
+    margin: 0 2%;
 }
 
 nav ul li a {
-    color: rgb(19, 32, 25); /* Couleur du texte en vert */
+    color: rgb(19, 32, 25);
     text-decoration: none;
-    font-weight: bold; /* Met les liens en gras */
-    transition: color 0.3s; /* Effet de transition */
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #005f00; /* Changement de couleur au survol */
+    color: #005f00;
 }
 
 .hero {
-    background-image: url(/img/hero_img.webp); /* Remplace par le chemin de ton image */
+    background-image: url(/img/hero_img.webp);
     background-size: cover;
     background-position: center;
-    height: 80vh; /* Utilise 100% de la hauteur de la vue */
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
     position: relative;
-    margin: 0; /* Enlève les marges */
+    margin: 0;
 }
 
 .hero-content h1 {
-    font-size: 4.5vw; /* Taille du titre ajustée */
+    font-size: 4.5vw;
     margin: 0;
-    text-shadow: 1px 1px rgb(19, 32, 25); /* Contour du texte en vert */
-    -webkit-text-stroke: 1px rgb(19, 32, 25); /* Contour vert pour le texte */
+    text-shadow: 1px 1px rgb(19, 32, 25);
+    -webkit-text-stroke: 1px rgb(19, 32, 25);
 }
 
 .hero-content h2 {
-    font-size: 3vw; /* Taille du sous-titre ajustée */
+    font-size: 3vw;
     margin: 0;
-    text-shadow: 1px 1px rgb(19, 32, 25); /* Contour du texte en vert */
-    -webkit-text-stroke: 1px rgb(19, 32, 25); /* Contour vert pour le texte */
+    text-shadow: 1px 1px rgb(19, 32, 25);
+    -webkit-text-stroke: 1px rgb(19, 32, 25);
 }
 
 .presentation {
-    display: flex; /* Utilise flexbox pour organiser les sections */
-    align-items: center; /* Centre les éléments verticalement */
+    display: flex;
+    align-items: center;
     width: 55%;
-    height: 60vh; /* Hauteur de la section de présentation */
-    background-color: rgb(19, 32, 25); /* Fond vert */
-    color: white; /* Texte en blanc */
-    padding: 2rem; /* Padding de la section */
-    position: relative; /* Positionnement relatif pour le chevauchement */
-    margin-top: -100px; /* Chevauche légèrement le hero banner */
-    opacity: 0; /* Commence invisible */
-    transform: translateX(-100px); /* Déplace la section hors de la vue vers la gauche */
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transition pour l'effet */
+    height: 60vh;
+    background-color: rgb(19, 32, 25);
+    color: white;
+    padding: 2rem;
+    position: relative;
+    margin-top: -100px;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .presentation.visible {
-    opacity: 1; /* Devenez visible */
-    transform: translateX(0); /* Revenir à sa position d'origine */
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .presentation-text {
     margin-left: 10%;
-    width: 75%; /* Largeur de la section de présentation */
+    width: 75%;
 }
 
 .presentation h2 {
-    margin-top: 0; /* Enlève la marge supérieure */
+    margin-top: 0;
 }
 
 .presentation p {
-    font-size: 1rem; /* Taille de police pour le texte */
+    font-size: 1rem;
 }
 
-/* Section Émissions de CO2 */
 .emissions-co2 {
     margin-top: 10vh;
     margin-bottom: 10vh;
     padding: 0;
-    display: flex; /* Flexbox pour aligner les éléments de gauche à droite */
-    justify-content: space-between; /* Espace entre les éléments */
-    align-items: center; /* Centre les éléments verticalement */
-    width: 85%; /* Largeur de la section */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
 }
 
 .co2-text {
-    width: 30%; /* Largeur pour la section texte */
+    width: 30%;
     padding: 2rem;
-    background-color: rgb(19, 32, 25); /* Fond vert uniquement pour la partie texte */
-    color: white; /* Texte en blanc */
-    box-shadow: none; /* Pas d'ombre */
-    opacity: 0; /* Commence invisible */
-    transform: translateY(20px); /* Déplace légèrement le texte vers le bas */
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transition pour l'effet */
+    background-color: rgb(19, 32, 25);
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .co2-text.visible {
-    opacity: 1; /* Devient visible */
-    transform: translateY(0); /* Revenir à sa position d'origine */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .co2-graph {
-    width: 50%; /* Largeur pour la partie graphique */
-    background-color: white; /* Fond blanc pour la partie graphique */
+    width: 50%;
+    background-color: white;
     padding: 2rem;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre pour le contraste */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .co2-graph img {
@@ -142,45 +140,179 @@ nav ul li a:hover {
 }
 
 .somme {
-    position: absolute; /* Position absolue pour le chevauchement */
-    top: calc(80vh + 20vh); /* Positionné juste en dessous du hero banner (ajuster si nécessaire) */
-    right: 10%; /* Ajustez cette valeur pour l'alignement */
-    width: 25%; /* Largeur du sommaire */
-    background-color: white; /* Fond blanc pour le sommaire */
-    padding: 1rem; /* Padding du sommaire */
-    color: rgb(19, 32, 25); /* Texte en vert */
-    box-shadow: none; /* Enlève la bordure ou l'ombre */
+    position: absolute;
+    top: calc(80vh + 20vh);
+    right: 10%;
+    width: 25%;
+    background-color: white;
+    padding: 1rem;
+    color: rgb(19, 32, 25);
+    box-shadow: none;
 }
 
 .somme h2 {
-    margin-top: 0; /* Enlève la marge supérieure */
+    margin-top: 0;
 }
 
 .somme ul {
-    list-style: none; /* Enlève les puces */
-    padding: 0; /* Enlève le padding */
+    list-style: none;
+    padding: 0;
 }
 
 section {
-    padding: 2rem; /* Padding responsive */
-    margin: 2rem 0; /* Marges responsive */
+    padding: 2rem;
+    margin: 2rem 0;
 }
 
-footer {
+#temp-evolution {
+    background-color: rgb(19, 32, 25);
+    color: white;
+    height: auto; /* Modifié pour s'adapter à la hauteur du contenu */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrer le contenu */
+    align-items: center; /* Centrer le contenu */
     text-align: center;
-    padding: 2rem 0; /* Padding responsive */
-    background: rgb(19, 32, 25); /* Fond du footer en vert */
-    color: white; /* Texte du footer en blanc */
 }
 
-footer p {
-    font-size: 0.9rem; /* Taille de police pour le texte du footer */
+#temp-evolution h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-.membre {
-    border: 1px solid #ddd;
-    margin: 10px;
-    padding: 1rem; /* Padding responsive */
+#temp-evolution p {
+    font-size: 1.2em;
+    max-width: 1200px;
+}
+
+#previsions-futures {
+    background-color: white;
+    color: rgb(19, 32, 25);
+    height: auto; /* Modifié pour s'adapter à la hauteur du contenu */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrer le contenu */
+    align-items: center; /* Centrer le contenu */
+    text-align: center;
+}
+
+#previsions-futures h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#previsions-futures p {
+    font-size: 1.2em;
+    max-width: 1200px;
+}
+
+/* Suppression du graphique d'évolution de température */
+
+.fonte-glaciers {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row-reverse;
+}
+
+.glaciers-text {
+    width: 30%;
+    padding: 2rem;
+    background-color: rgb(19, 32, 25);
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.glaciers-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.glaciers-graph {
+    width: 50%;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.glaciers-graph canvas {
+    width: 100%;
+    height: auto;
+}
+
+.montee-eaux {
+    width: 85%;
+    margin: 2rem auto;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#impact-france {
+    background-color: rgb(19, 32, 25);
+    color: white;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+.impact-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.impact-graph {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 50%;
+}
+
+.impact-text {
+    flex: 1;
+    padding: 20px;
+    max-width: 45%;
+}
+
+.impact-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.impact-columns {
+    display: flex;
+    gap: 30px;
+}
+
+.impact-column {
+    flex: 1;
+}
+
+.impact-column h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.impact-column p {
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 #tooltip {
@@ -192,66 +324,53 @@ footer p {
     padding: 10px;
     border-radius: 5px;
     font-size: 12px;
-    pointer-events: none; /* Le tooltip ne doit pas interférer avec les événements de la souris */
+    pointer-events: none;
 }
+
 #france-map {
     display: flex;
     justify-content: center;
     width: 100%;
     height: 500px;
-    margin: 20px 0;
 }
 
-/* Media Queries pour rendre le site responsive */
+footer {
+    background-color: rgb(19, 32, 25);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    z-index: 10;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Styles pour les graphiques */
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsiveness */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; /* Aligne les éléments de la navbar verticalement sur petits écrans */
+    .presentation, .emissions-co2, .fonte-glaciers, .montee-eaux {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .hero-content h1 {
-        font-size: 6vw; /* Ajuste la taille du titre pour petits écrans */
+    .co2-text, .glaciers-text, .impact-text, .impact-graph {
+        width: 90%;
     }
 
-    .hero-content h2 {
-        font-size: 4vw; /* Ajuste la taille du sous-titre pour petits écrans */
+    .impact-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .presentation {
-        flex-direction: column; /* Aligne les sections verticalement sur petits écrans */
-    }
-
-    .presentation-text,
-    .additional-info {
-        width: 100%; /* Prend 100% de la largeur sur petits écrans */
-        padding-left: 0; /* Enlève le padding gauche */
-    }
-
-    section {
-        padding: 1rem; /* Réduit le padding sur petits écrans */
-        margin: 1rem 0; /* Réduit les marges sur petits écrans */
-    }
-
-    footer {
-        padding: 1rem 0; /* Réduit le padding du footer sur petits écrans */
-    }
-
-    footer p {
-        font-size: 0.8rem; /* Ajuste la taille de la police pour le footer */
-    }
-
-    .emissions-co2 {
-        flex-direction: column; /* Aligne les sections verticalement sur petits écrans */
-        text-align: center;
-        width: 100%; /* Prend 100% de la largeur */
-    }
-
-    .co2-text {
-        width: 100%; /* La section prend 100% de la largeur */
-        margin-left: 0; /* Enlève la marge à gauche */
-    }
-
-    .co2-graph {
-        width: 100%; /* Le graphique prend aussi 100% de la largeur */
-        margin-top: 2rem; /* Ajoute un espace entre le texte et le graphique */
+    .impact-graph, .impact-text {
+        max-width: 100%;
     }
 }
