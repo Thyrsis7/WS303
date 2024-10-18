@@ -334,6 +334,133 @@ section {
     height: 500px;
 }
 
+/* Section Sources */
+.sources-section {
+    background-color: rgb(19, 32, 25); /* Couleur de fond vert */
+    color: white; /* Texte en blanc */
+    padding: 40px 20px; /* Espacement interne */
+    text-align: center; /* Centrer le texte */
+}
+
+.sources-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px rgb(19, 32, 25); /* Ombre sur le texte */
+    -webkit-text-stroke: 1px white; /* Contour blanc sur le titre */
+}
+
+.sources-list {
+    list-style-type: none; /* Enlever les puces */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 80%; /* Limiter la largeur des sources */
+}
+
+.sources-list li {
+    margin-bottom: 50px; /* Espacement entre chaque source */
+}
+
+.sources-list a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.sources-list a:hover {
+    color: #ccc; /* Changer la couleur au survol */
+}
+
+/* Styles pour la section des membres */
+.our-team {
+    padding: 30px 0 40px;
+    margin-bottom: 30px;
+    background-color: rgb(19, 32, 25);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%; /* Ajoute ceci pour s'assurer que les cartes prennent toute la largeur */
+}
+
+.our-team .picture {
+    display: inline-block;
+    height: 120px; /* Diamètre fixe pour l'image */
+    width: 120px;  /* Diamètre fixe pour l'image */
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+    border-radius: 50%; /* Rend l'image parfaitement ronde */
+    overflow: hidden; /* Assure que l'image reste dans le cadre rond */
+}
+
+.our-team .picture img {
+    width: 100%;  /* L'image occupe toute la largeur du conteneur */
+    height: 100%; /* L'image occupe toute la hauteur du conteneur */
+    object-fit: cover; /* Recadre l'image pour qu'elle remplisse parfaitement le rond */
+    border-radius: 50%; /* Applique également un bord arrondi à l'image */
+    transition: transform 0.3s ease-in-out;
+}
+
+.our-team:hover .picture img {
+    transform: scale(0.9); /* Effet de zoom au survol */
+}
+
+.our-team .team-content {
+    margin-top: 20px;
+}
+
+.our-team .name {
+    font-size: 1.5em;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+}
+
+.our-team .title {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.our-team .team-content p a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.our-team .team-content p a:hover {
+    text-decoration: underline;
+}
+
+/* Styles responsives pour les cartes */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centrer les cartes */
+    flex-wrap: wrap; /* Permet de passer à la ligne si l'écran est trop petit */
+    margin-top: 50px;
+    margin-bottom: 70px;
+    gap: 20px; /* Espacement entre les cartes */
+}
+
+.col-12, .col-sm-6, .col-md-4, .col-lg-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 35%;
+    max-width: 45%;
+    padding: 10px;
+}
+
 footer {
     background-color: rgb(19, 32, 25);
     color: white;
